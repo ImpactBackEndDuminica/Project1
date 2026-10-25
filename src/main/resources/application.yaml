@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: lesson18
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/example
+    username: postgres
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  sql:
+    init:
+      mode: always
