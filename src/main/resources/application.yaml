@@ -3,8 +3,8 @@ spring:
     name: lesson18
 
   datasource:
-    url: jdbc:postgresql://localhost:5433/example
-    username: postgres
+    url: ${DB_URL:jdbc:postgresql://localhost:5433/example}
+    username: ${DB_USERNAME:postgres}
     password: ${DB_PASSWORD}
 
   jpa:
