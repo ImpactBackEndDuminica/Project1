@@ -1,6 +1,7 @@
 package com.impact.lessons.controllers;
 
 
+import com.impact.lessons.Model.UserModel;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -17,4 +18,9 @@ public class UserController {
     public List<String> get_all(){
         return userService.getAllUsers();
     }
+    @PutMapping("/create_user")
+    public UserModel createUser(@RequestBody UserModel user){
+        return userService.createUser(user);
+    }
+
 }
